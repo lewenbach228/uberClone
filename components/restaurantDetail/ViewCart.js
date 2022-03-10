@@ -85,7 +85,7 @@ export default function ViewCart({ navigation }) {
             ))}
             <View style={styles.subtotalContainer}>
               <Text style={styles.subtotalText}>Subtotal</Text>
-              <Text>{totalUSD}</Text>
+              <Text>${totalUSD} </Text>
             </View>
             <View style={{ flexDirection: "row", justifyContent: "center" }}>
               <TouchableOpacity
@@ -113,7 +113,7 @@ export default function ViewCart({ navigation }) {
                     top: 17,
                   }}
                 >
-                  {total ? totalUSD : ""}
+                  {total ? `$${totalUSD}` : ""}
                 </Text>
               </TouchableOpacity>
             </View>
@@ -141,7 +141,7 @@ export default function ViewCart({ navigation }) {
             justifyContent: "center",
             flexDirection: "row",
             position: "absolute",
-            bottom: 130,
+            bottom: 30,
             zIndex: 999,
           }}
         >
@@ -160,15 +160,14 @@ export default function ViewCart({ navigation }) {
                 justifyContent: "flex-end",
                 padding: 15,
                 borderRadius: 30,
-                width: 300,
-                position: "relative",
+                width: 250,
               }}
               onPress={() => setModalVisible(true)}
             >
               <Text style={{ color: "white", fontSize: 20, marginRight: 30 }}>
                 View Cart
               </Text>
-              <Text style={{ color: "white", fontSize: 20 }}>{totalUSD}</Text>
+              <Text style={{ color: "white", fontSize: 20 }}>${totalUSD}</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -44,7 +44,7 @@ export default function MenuItems({
     Boolean(cartItems.find((item) => item.title === food.title));
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{ height: 400 }}>
       {foods.map((food, index) => (
         <View key={index}>
           <View style={styles.menuItemStyle}>
@@ -73,7 +73,7 @@ export default function MenuItems({
 }
 
 const FoodInfo = (props) => (
-  <View style={{ width: 240, justifyContent: "space-evenly" }}>
+  <View style={{ width: 180, justifyContent: "space-evenly" }}>
     <Text style={styles.titleStyle}>{props.food.title}</Text>
     <Text>{props.food.description}</Text>
     <Text>{props.food.price}</Text>

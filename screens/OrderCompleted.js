@@ -64,21 +64,21 @@ export default function OrderCompleted() {
           loop={false}
         />
         <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-          Your order at {restaurantName} has been placed for {totalUSD}
+          Your order at {restaurantName} has been placed for ${totalUSD}
         </Text>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <MenuItems
             foods={lastOrder.items}
             hideCheckbox={true}
             marginLeft={10}
           />
-          <LottieView
-            style={{ height: 200, alignSelf: "center" }}
-            source={require("../assets/animations/cooking.json")}
-            autoPlay
-            speed={0.5}
-          />
         </ScrollView>
+        <LottieView
+          style={{ height: 200, alignSelf: "center", marginBottom: 20 }}
+          source={require("../assets/animations/cooking.json")}
+          autoPlay
+          speed={0.5}
+        />
       </View>
     </SafeAreaView>
   );
